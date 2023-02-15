@@ -1,0 +1,124 @@
+html {
+    font-size: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.container__h1 {
+    text-align: center;
+}
+
+.form {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: wheat;
+    padding: 1rem;
+    position: absolute;
+    left: 35%;
+    transform: scale(0);
+    transition: .3s ease-in-out transform;
+}
+
+.form.show {
+    transform: scale(1);
+    transition: .3s ease-in-out transform;
+}
+
+.form__h2 {
+    text-align: center;
+}
+
+.form__div-fields {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form__input {
+    border: 1px solid black;
+    border-radius: .5rem;
+    height: 20px;
+    padding-left: .7rem;
+}
+
+.form__buttons {
+    display: flex;
+    gap: .2rem;
+}
+
+.form__button {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: .2rem;
+    cursor: pointer;
+}
+
+.form__button--primary {
+    background-color: lightblue;
+}
+
+.form__button--primary:hover {
+    background-color: rgb(72, 96, 104);
+    color: #fff;
+}
+
+.form__button--red {
+    background-color: rgb(234, 83, 83);
+}
+
+.form__button--red:hover {
+    background-color: rgb(143, 48, 48);
+    color: #fff;
+}
+
+.columns {
+    display: flex;
+    align-items: baseline;
+}
+
+.columns__column {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.columns__header {
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.columns__button-add {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: black;
+    color: #fff;
+}
+
+.columns__button-add:hover {
+    background-color: #c0bcbc;
+    color: black;
+}
+
+.columns__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.columns__task {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+}

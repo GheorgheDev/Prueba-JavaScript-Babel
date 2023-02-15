@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Prueba JavaScript</title>
+  </head>
+  <body>
+    <template id="template">
+      <div class="columns__task">
+        <button><</button>
+        <p>Tarea - 1</p>
+        <button class="delete">X</button>
+        <button class="move-left">></button>
+      </div>
+    </template>
+    <div class="container">
+      <h1 class="container__h1">Prueba JS</h1>
+      <form class="form">
+        <h2 class="form__h2">Create <span id="typeColumn"></span></h2>
+        <div class="form__div-fields">
+          <label for="name">Name Task</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="form__input"
+          />
+        </div>
+        <div class="form__div-fields">
+          <label for="time">Time Task</label>
+          <input
+            type="number"
+            name="time"
+            placeholder="time"
+            class="form__input"
+          />
+        </div>
+        <div class="form__buttons">
+          <button type="submit" class="form__button form__button--primary">
+            Create Task
+          </button>
+          <button
+            type="button"
+            id="cancelButton"
+            class="form__button form__button--red"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+      <div class="columns">
+        <div class="columns__column">
+          <div class="columns__header">
+            <h3>To Do</h3>
+            <button class="columns__button-add" data-column="to do">+</button>
+          </div>
+          <div class="columns__content" id="toDo"></div>
+        </div>
+        <div class="columns__column">
+          <div class="columns__header">
+            <h3>In Progress</h3>
+            <button class="columns__button-add" data-column="in progress">
+              +
+            </button>
+          </div>
+          <div class="columns__content" id="inProgress"></div>
+        </div>
+        <div class="columns__column">
+          <div class="columns__header">
+            <h3>To Be Tested</h3>
+            <button class="columns__button-add" data-column="to be tested">
+              +
+            </button>
+          </div>
+          <div class="columns__content" id="toBeTested"></div>
+        </div>
+        <div class="columns__column">
+          <div class="columns__header">
+            <h3>Done</h3>
+            <button class="columns__button-add" data-column="done">+</button>
+          </div>
+          <div class="columns__content" id="done"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
